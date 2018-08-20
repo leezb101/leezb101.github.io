@@ -87,6 +87,7 @@
         console.log('这里需要调用高德地图API获取地理信息逆编码...')
         
         alert('开始调用接口')
+        alert(`参数为: key=${key}&location=${param.location}`)
 
         get(finalUrl).then((response) => {
           console.log(response)
