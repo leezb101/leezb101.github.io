@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>测试openUrl</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    var host = 'moxiaobai.cc'
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https"
+    }
+  </script>
 </head>
 <body>
   <div id='display-tag'>这里需要获取经纬度</div>
