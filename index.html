@@ -68,12 +68,15 @@
   var action = function getLocation () {
     // 此处需要获取当前用户信息
     if (navigator.geolocation) {
+      alert('开始获取地理信息')
       navigator.geolocation.getCurrentPosition((position) => {
         var lat = position.coords.latitude
         var long = position.coords.longitude
         lat = lat.toFixed(6)
         long = long.toFixed(6)
-        
+
+        alert('已经获取到地理信息，开始拼接req')
+
         const key = 'ee525f82e554b594dc67d880f2ad0676'
         var param = {}
         param.key = key
@@ -83,6 +86,8 @@
         var finalUrl = `${geoUrl}?key=${key}&location=${param.location}`
         console.log('这里需要调用高德地图API获取地理信息逆编码...')
         
+        alert('开始调用接口')
+
         get(finalUrl).then((response) => {
           console.log(response)
           var result = JSON.parse(response)
@@ -91,6 +96,8 @@
             var building = result.regeocode.addressComponent.building.name[0]
             display.innerHTML = `当前您所在的位置为——\n${city}, ${building}\n所在地理坐标为——\n${param.lat}, ${param.long}`
             // alert(`当前您所在的位置为——\n${city}, ${building}\n所在地理坐标为——\n${param.lat}, ${param.long}`)
+          } else {
+            alert('高德API返回不是1' + result.status + ',' + result.info)
           }
         }, (error) => {
           alert(error)
