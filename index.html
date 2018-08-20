@@ -80,7 +80,7 @@
         const key = 'ee525f82e554b594dc67d880f2ad0676'
         var param = {}
         param.key = key
-        param.location = `${lat},${long}`
+        param.location = `${long},${lat}`
 
         const geoUrl = 'https://restapi.amap.com/v3/geocode/regeo'
         var finalUrl = `${geoUrl}?key=${key}&location=${param.location}`
