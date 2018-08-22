@@ -6,12 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>测试openUrl</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    var host = 'moxiaobai.cc'
-    if ((host == window.location.host) && (window.location.protocol != "https:")) {
-      window.location.protocol = "https"
-    }
-  </script>
 </head>
 <body>
   <div id='display-tag'>这里需要获取经纬度</div>
@@ -92,7 +86,7 @@
           var result = JSON.parse(response)
           if (result.status === '1') {
             var city = result.regeocode.addressComponent.city[0]
-            var building = result.regeocode.
+            var building = result.regeocode.formatted_address
             display.innerHTML = `当前您所在的位置为——\n${city}, ${formatted_address}\n所在地理坐标为——\n${param.lat}, ${param.long}`
             // alert(`当前您所在的位置为——\n${city}, ${building}\n所在地理坐标为——\n${param.lat}, ${param.long}`)
             startPoint = formatted_address
