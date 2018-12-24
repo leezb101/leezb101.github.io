@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>圣诞快乐～</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.let_it_snow.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("canvas.flare").let_it_snow({
+		windPower: 0,
+		speed: 0,
+		color: "#392F52",
+		size:120,
+		opacity: 0.00000001,
+		count: 40,
+		interaction: false
+	});
+
+	$("canvas.snow").let_it_snow({
+		windPower: 3,
+		speed: 1,
+		count: 250,
+		size: 0
+	});
+
+	$("canvas.flake").let_it_snow({
+		windPower: -3,
+		speed: 1,
+		count: 20,
+		size: 10,
+		image: "images/white-snowflake.png"
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+	<canvas width="100%" height="100%" class="flare"></canvas>
+	<canvas width="100%" height="100%" class="snow"></canvas>
+	<canvas width="100%" height="100%" class="flake"></canvas>
+
+<div style="text-align:center;">
+<p><a id="hello" href="#" target="_blank">～圣诞快乐～</a></p>
+</div>
+<div id='greeting'>
+	<p></p>
+</div>
+<div class="ground"></div>
+<div class="new-bottom">
+	<p id="greeting-typing">
+		美丽的赵建超姑娘圣诞快乐！
+	</p>
+	<div id="present-img"></div>
+</div>
+<div class="snowglobe">
+	<div class="sg-bg"></div>
+	<div class="grnd-snow">
+		<div class="snow-surface"></div>
+	</div>
+	<div class="tree">
+		<div class="tree-shadow"></div>
+		<div class="branch-bot">
+			<div class="branch-bot-snow"></div>
+			<div class="branch-shadow"> </div>
+		</div>
+		<div class="branch-mid">
+			<div class="branch-mid-snow"></div>
+			<div class="branch-shadow"> </div>
+		</div>
+		<div class="branch-top">
+			<div class="branch-top-snow"></div>
+		</div>
+		<div class="star"></div>
+		<div class="baubles"></div>
+	</div>
+	<div class="sm-shadow"></div>
+	<div class="snowman">
+		<div class="snowman-bot"></div>
+		<div class="snowman-top"></div>
+		<div class="coal"></div>
+		<div class="carrot"></div>
+	</div>
+	<div class="falling-snow-wrap">
+		<div class="falling-snow">
+			<div class="flakes1">
+				<p>*</p>
+			</div>
+			<div class="flakes2">
+				<p>*</p>
+			</div>
+		</div>
+	</div>
+	<div class="sg-fg"></div>
+	<div class="stand-curved-wrap">
+		<div class="stand-curved"></div>
+	</div>
+</div>
+<embed src="./bgm-jingleB.mp3" autostart="true" loop="true" hidden="true"></embed>
+</body>
+</html>
