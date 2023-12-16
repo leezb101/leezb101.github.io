@@ -17,6 +17,7 @@ const withNextra = nextra({
 const nextConfig = {
   // next 工程本身配置内容 
   reactStrictMode: true,
+  output: 'export',
 }
 
 export default withNextra(nextConfig)
