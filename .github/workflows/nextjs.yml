@@ -25,6 +25,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # clear cache
+  clear:
+    steps:
+      - name: clear
+        run: |
+          rm -rf ./next/cache
   # Build job
   build:
     runs-on: ubuntu-latest
