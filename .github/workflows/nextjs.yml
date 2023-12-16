@@ -27,6 +27,7 @@ concurrency:
 jobs:
   # clear cache
   clear:
+    runs-on: ubuntu-latest
     steps:
       - name: clear
         run: |
