@@ -18,6 +18,9 @@ const nextConfig = {
   // next 工程本身配置内容 
   reactStrictMode: true,
   output: 'export',
+  images: {
+    unoptimized: true
+  }
 }
 
 export default withNextra(nextConfig)
